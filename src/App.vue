@@ -123,7 +123,7 @@ export default {
     }
   },
   async created(){
-    axios.get("http://localhost:8080/api/covid19?CK=covid-19@nchc.org.tw&querydata=5002&limited=全部縣市").then((res)=>{
+    axios.get("/api/covid19?CK=covid-19@nchc.org.tw&querydata=5002&limited=全部縣市").then((res)=>{
      
         res.data.forEach(d => {
         this.fullData.push({date:d.a01,city:d.a02,area:d.a03,add:d.a04,total:d.a05})
@@ -142,7 +142,7 @@ export default {
     })
 
     //---------------------------------------------------------------
-    axios.get("http://localhost:8080/api/covid19?CK=covid-19@nchc.org.tw&querydata=4001&limited=TWN").then((res)=>{
+    axios.get("/api/covid19?CK=covid-19@nchc.org.tw&querydata=4001&limited=TWN").then((res)=>{
       res.data.forEach(d=>{
         this.twnData.push({date:d.a04,twntotal:d.a05,death:d.a08,vac:d.a21})
       })
