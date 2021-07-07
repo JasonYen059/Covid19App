@@ -1,4 +1,9 @@
 module.exports = {
+  publicPath: process.env.NODE_ENV === 'production'
+  ? '/Covid19_Data_App/'
+  : '/',
+
+
     configureWebpack: {
       devServer: {
         open: true, //是否自動彈出瀏覽器頁面
