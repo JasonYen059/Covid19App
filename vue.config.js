@@ -5,7 +5,7 @@ module.exports = {
   
     configureWebpack: {
       devServer: {
-          proxy:'https://covid-19.nchc.org.tw'
+          proxy:'http://cors.io/?https://covid-19.nchc.org.tw'
 
         // open: true, //是否自動彈出瀏覽器頁面
         // host: "localhost", 

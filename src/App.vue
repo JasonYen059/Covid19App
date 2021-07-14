@@ -64,7 +64,7 @@ export default {
   data(){
     return {
       loaded:true,
-      cities:'台北市',
+      cities:'',
       cityarea:'全區',
       getcity:0,
       //縣市陣列
@@ -124,7 +124,7 @@ export default {
   },
   async created(){
     axios.get("/api/covid19?CK=covid-19@nchc.org.tw&querydata=5002&limited=全部縣市").then((res)=>{
-     
+        
         res.data.forEach(d => {
         this.fullData.push({date:d.a01,city:d.a02,area:d.a03,add:d.a04,total:d.a05})
          })
